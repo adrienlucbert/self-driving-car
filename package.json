@@ -1,0 +1,22 @@
+{
+  "name": "self-driving-car",
+  "version": "1.0.0",
+  "description": "Neural-network using model-free learning to drive a car. Made with JavaSript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrienlucbert/self-driving-car.git"
+  },
+  "author": "Adrien Lucbert, Albert Corson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adrienlucbert/self-driving-car/issues"
+  },
+  "homepage": "https://github.com/adrienlucbert/self-driving-car#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
