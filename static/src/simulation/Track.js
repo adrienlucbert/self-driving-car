@@ -1,6 +1,7 @@
 class Track {
     constructor(env = null, url = null) {
         this.env = env;
+        this.init = false;
         this.title = null;
         this.size = new Vector(0, 0);
         this.edges = [];
@@ -13,6 +14,7 @@ class Track {
         this.size.x = json.size[0];
         this.size.y = json.size[1];
         this.edges = json.edges;
+        this.init = true;
     }
 
     createFromURL(url) {
@@ -47,6 +49,7 @@ class Track {
     render(ctx) {
         let origin = this.getOrigin(ctx);
 
+        if (!this.init) return;
         ctx.beginPath();
         ctx.rect(origin.x, origin.y, this.size.x, this.size.y);
         ctx.fillStyle = "#65d649";

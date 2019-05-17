@@ -1,7 +1,7 @@
 const canvas = document.querySelector("canvas");
 const framerate = 60;
 const env = new Simulation(canvas, framerate);
-new Track(env, "/src/trails/test.json");
+new Track(env, "/src/track/test.json");
 const car = new Car(env);
 
 env.run();
