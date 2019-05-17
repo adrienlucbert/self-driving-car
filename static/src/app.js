@@ -24,3 +24,7 @@ document.onkeydown = (evt) => {
     if (evt.key == "ArrowLeft")
         car.setWheelDir(-1)
 };
+
+for (let i = 0; i < 360; i += 1) {
+    new Ray(env, car, i);
+}

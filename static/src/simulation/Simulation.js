@@ -51,13 +51,25 @@ class Simulation {
         return (performance.now() - this.timer);
     }
 
+    getTrack() {
+        for (let index in this.objs) {
+            if (this.objs[index] instanceof Track)
+                return (this.objs[index]);
+        }
+        return (undefined);
+    }
+
     render() {
         const fps = 1000 / this.getElapsedTime();
 
         if (this.isRunning()) {
             this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
             for (let index in this.objs) {
+                this.ctx.beginPath();
+                this.ctx.save();
                 this.objs[index].render(this.ctx);
+                this.ctx.restore();
+                this.ctx.closePath();
             }
             this.ctx.beginPath();
             this.ctx.fillStyle = '#444444';

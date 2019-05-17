@@ -75,6 +75,10 @@ class Car {
         return (this.wheelSpeed);
     }
 
+    getPosition() {
+        return (this.position);
+    }
+
     setWheelSpeed(speed) {
         if (speed >= -0.5 && speed <= 1)
             this.wheelSpeed = speed;
